@@ -1,0 +1,60 @@
+\documentclass[14pt]{beamer}
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\usepackage{graphics}
+\usepackage{array}
+\usepackage{verbatim}
+\usepackage{hyperref}
+
+\title{Know your (testing) engine}
+\author{Motiejus Jak\v{s}tys \\
+Spil Games}
+
+\date{June 2013}
+
+\begin{document}
+
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+\begin{frame}{Spil Storage Platform}
+    Objectives:
+    \begin{itemize}
+        \item Linear scalability
+        \item 10ths of thousands of requests per second
+    \end{itemize}
+    Spoken about:
+    \begin{itemize}
+        \item Presented by Enrique Paz Perez in Erlang Factory SF 2013
+        \item Performance metrics promised in other conference
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Basho bench}
+    \begin{itemize}
+        \item "Proven" product (basho!)
+        \item Reasonable LOC of boilerplate required
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{First runs}
+    \begin{center}
+        \includegraphics[height=0.8\textheight]{sspbench_both.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Basho-bench default options}
+    \tt{
+        \{rate, 5\}. \\
+        \{concurrent, 3\}.
+    }
+\end{frame}
+
+\begin{frame}{Second run}
+    \begin{center}
+        \includegraphics[height=0.8\textheight]{sspbench_cache.png}
+    \end{center}
+\end{frame}
+
+\end{document}
